@@ -25,48 +25,48 @@ public class EmployeeBook {
         }
     }
 
-    public double payAllForMonth(Employee[] employees) {
+    public double payAllForMonth(Employee[] employee) {
         double sum = 0;
-        for (Employee value : employees) {
+        for (Employee value : this.employee) {
             sum += value.getSalary();
         }
         return sum;
     }
 
-    public void minSalary(Employee[] employees) {
+    public void minSalary(Employee[] employee) {
         double minSalary = Integer.MAX_VALUE;
         int target = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getSalary() < minSalary) {
-                minSalary = employees[i].getSalary();
+        for (int i = 0; i < this.employee.length; i++) {
+            if (this.employee[i].getSalary() < minSalary) {
+                minSalary = this.employee[i].getSalary();
                 target = i;
             }
         }
-        System.out.println("Сотрудник с минимальной зарплатой - " + employees[target].getFio());
+        System.out.println("Сотрудник с минимальной зарплатой - " + this.employee[target].getFio());
     }
 
-    public void maxSalary(Employee[] employees) {
+    public void maxSalary(Employee[] employee) {
         double maxSalary = Integer.MIN_VALUE;
         int target = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getSalary() > maxSalary) {
-                maxSalary = employees[i].getSalary();
+        for (int i = 0; i < this.employee.length; i++) {
+            if (this.employee[i].getSalary() > maxSalary) {
+                maxSalary = this.employee[i].getSalary();
                 target = i;
             }
         }
-        System.out.println("Сотрудник с максимальной зарплатой - " + employees[target].getFio());
+        System.out.println("Сотрудник с максимальной зарплатой - " + this.employee[target].getFio());
     }
 
-    public double averagePayAllForMonth(Employee[] employees) {
+    public double averagePayAllForMonth(Employee[] employee) {
         double i;
-        i = payAllForMonth(getEmployee()) / employees.length;
+        i = payAllForMonth(getEmployee()) / this.employee.length;
         return i;
     }
 
-    public void nameEmployee(Employee[] employees) {
+    public void nameEmployee(Employee[] employee) {
         System.out.println("Список сотрудников:");
-        for (int i = 1; i < employee.length + 1; i++) {
-            System.out.println(i + ") " + employees[i - 1].getFio());
+        for (int i = 1; i < this.employee.length + 1; i++) {
+            System.out.println(i + ") " + this.employee[i - 1].getFio());
         }
     }
 }
