@@ -19,8 +19,8 @@ public class EmployeeBook {
         return employee;
     }
 
-    public void printAllEmployees(Employee[] employees) {
-        for (Employee all : employees) {
+    public void printAllEmployees() {
+        for (Employee all : employee) {
             System.out.println(all);
         }
     }

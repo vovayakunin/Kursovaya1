@@ -3,7 +3,7 @@ public class Main {
 
         EmployeeBook employeeBook = new EmployeeBook();
 
-        employeeBook.printAllEmployees(employeeBook.getEmployee());
+        employeeBook.printAllEmployees();
         System.out.println("Месячная выплата всем сотрудникам = " + employeeBook.payAllForMonth(employeeBook.getEmployee()));
         employeeBook.minSalary(employeeBook.getEmployee());
         employeeBook.maxSalary(employeeBook.getEmployee());
