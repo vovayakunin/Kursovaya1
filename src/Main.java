@@ -9,6 +9,7 @@ public class Main {
         employeeBook.maxSalary(employeeBook.getEmployee());
         System.out.println("Среднее зарплат всех сотрудников = " + employeeBook.averagePayAllForMonth(employeeBook.getEmployee()));
         employeeBook.nameEmployee(employeeBook.getEmployee());
+
     }
 }
 

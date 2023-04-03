@@ -21,14 +21,20 @@ public class EmployeeBook {
 
     public void printAllEmployees() {
         for (Employee all : employee) {
+            if (employee == null) {
+                continue;
+            }
             System.out.println(all);
+
         }
     }
 
     public double payAllForMonth(Employee[] employee) {
         double sum = 0;
         for (Employee value : this.employee) {
-            sum += value.getSalary();
+            if(value != null) {
+                sum += value.getSalary();
+            }
         }
         return sum;
     }
@@ -37,6 +43,9 @@ public class EmployeeBook {
         double minSalary = Integer.MAX_VALUE;
         int target = 0;
         for (int i = 0; i < this.employee.length; i++) {
+            if (employee == null) {
+                continue;
+            }
             if (this.employee[i].getSalary() < minSalary) {
                 minSalary = this.employee[i].getSalary();
                 target = i;
@@ -49,6 +58,9 @@ public class EmployeeBook {
         double maxSalary = Integer.MIN_VALUE;
         int target = 0;
         for (int i = 0; i < this.employee.length; i++) {
+            if (employee == null) {
+                continue;
+            }
             if (this.employee[i].getSalary() > maxSalary) {
                 maxSalary = this.employee[i].getSalary();
                 target = i;
@@ -59,6 +71,7 @@ public class EmployeeBook {
 
     public double averagePayAllForMonth(Employee[] employee) {
         double i;
+
         i = payAllForMonth(getEmployee()) / this.employee.length;
         return i;
     }
@@ -66,6 +79,9 @@ public class EmployeeBook {
     public void nameEmployee(Employee[] employee) {
         System.out.println("Список сотрудников:");
         for (int i = 1; i < this.employee.length + 1; i++) {
+            if (employee == null) {
+                continue;
+            }
             System.out.println(i + ") " + this.employee[i - 1].getFio());
         }
     }
